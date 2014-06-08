@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+  let(:base_title) { "Ternstyl" }
+
   describe "Home page" do
     it "should have the content 'Ternstyl'" do
       visit '/static_pages/home'
@@ -10,7 +12,7 @@ describe "Static pages" do
      
      it "should have the title 'Home'" do
       visit '/static_pages/home'
-      expect(page).to have_title("Ternstyl | Home")
+      expect(page).to have_title("#{base_title} | Home")
     end
   end
 
@@ -23,7 +25,7 @@ describe "Static pages" do
 
      it "should have the title 'About Ternstyl'" do
       visit '/static_pages/about'
-      expect(page).to have_title("Ternstyl | About Ternstyl")
+      expect(page).to have_title("#{base_title} | About Ternstyl")
     end
   end
 
@@ -36,7 +38,7 @@ describe "Static pages" do
 
      it "should have the title 'Contact'" do
       visit '/static_pages/contact'
-      expect(page).to have_title("Ternstyl | Contact")
+      expect(page).to have_title("#{base_title} | Contact")
     end
   end
 
@@ -49,7 +51,7 @@ describe "Static pages" do
 
      it "should have the title 'Help'" do
       visit '/static_pages/help'
-      expect(page).to have_title("Ternstyl | Help")
+      expect(page).to have_title("#{base_title} | Help")
     end
   end
 
@@ -62,7 +64,7 @@ describe "Static pages" do
 
      it "should have the title 'Membership Agreement'" do
       visit '/static_pages/membership'
-      expect(page).to have_title("Ternstyl | Membership Agreement")
+      expect(page).to have_title("#{base_title} | Membership Agreement")
     end
   end
 
@@ -75,7 +77,7 @@ describe "Static pages" do
 
      it "should have the title 'Privacy Policy'" do
       visit '/static_pages/privacy'
-      expect(page).to have_title("Ternstyl | Privacy Policy")
+      expect(page).to have_title("#{base_title} | Privacy Policy")
     end
   end
 
@@ -88,7 +90,7 @@ describe "Static pages" do
 
      it "should have the title 'Terms & Conditions'" do
       visit '/static_pages/terms'
-      expect(page).to have_title("Ternstyl | Terms & Conditions")
+      expect(page).to have_title("#{base_title} | Terms & Conditions")
     end
   end
 end
